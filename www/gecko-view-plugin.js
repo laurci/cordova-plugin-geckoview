@@ -1,17 +1,17 @@
-function ToastyPlugin() {}
+function GeckoViewPlugin() {}
 
-ToastyPlugin.prototype.show = function(message, duration, successCallback, errorCallback) {
+GeckoViewPlugin.prototype.show = function(message, duration, successCallback, errorCallback) {
   var options = {};
   options.message = message;
   options.duration = duration;
-  cordova.exec(successCallback, errorCallback, 'ToastyPlugin', 'show', [options]);
+  cordova.exec(successCallback, errorCallback, 'GeckoViewPlugin', 'show', [options]);
 }
 
-ToastyPlugin.install = function() {
+GeckoViewPlugin.install = function() {
   if (!window.plugins) {
     window.plugins = {};
   }
-  window.plugins.toastyPlugin = new ToastyPlugin();
-  return window.plugins.toastyPlugin;
+  window.plugins.geckoViewPlugin = new GeckoViewPlugin();
+  return window.plugins.geckoViewPlugin;
 };
-cordova.addConstructor(ToastyPlugin.install);
+cordova.addConstructor(GeckoViewPlugin.install);
