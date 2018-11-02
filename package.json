@@ -1,0 +1,39 @@
+{
+    "name": "cordova-plugin-geckoview",
+    "version": "0.0.1",
+    "description": "Replaces the default cordova-android renderer with Mozzilla Gecko",
+    "cordova": {
+      "id": "cordova-plugin-geckoview",
+      "platforms": [
+        "android"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/IAmTheVex/cordova-plugin-geckoview.git"
+    },
+    "keywords": [
+      "Toast",
+      "Notification",
+      "Message",
+      "Alert",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=4.0.0"
+      }
+    ],
+    "author": {
+      "name": "Laurentiu Ciobanu | vex",
+      "email": "laurentiu@thevexis.me",
+      "url": "http://www.thevexis.me"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/IAmTheVex/cordova-plugin-geckoview/issues"
+    },
+    "homepage": "https://github.com/IAmTheVex/cordova-plugin-geckoview/"
+  }

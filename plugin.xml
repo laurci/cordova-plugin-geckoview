@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-geckoview" version="0.0.1">
+    <name>GeckoViewPlugin</name>
+
+    <description>Replaces the default cordova-android renderer with Mozzilla Gecko</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,engine,gecko</keywords>
+    <repo>https://github.com/IAmTheVex/cordova-plugin-geckoview.git</repo>
+    <issue>https://github.com/IAmTheVex/cordova-plugin-geckoview/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=4.0.0"/>
+    </engines>
+  
+    <js-module src="www/gecko-view-plugin.js" name="geckoViewPlugin">
+        <clobbers target="window.plugins.geckoView" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GeckoViewPlugin">
+                <param name="android-package" value="labs.vex.corova.geckoview.GeckoViewPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/GeckoViewPlugin.java" target-dir="src/labs/vex/cordova/geckoview" />
+    </platform>
+</plugin>
